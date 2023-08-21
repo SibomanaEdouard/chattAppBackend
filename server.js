@@ -35,7 +35,7 @@ app.use(express.json());
 require('dotenv').config();
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO)
   .then(() => {
     console.log('Connected to MongoDB');
   })
