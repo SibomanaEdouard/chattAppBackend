@@ -291,7 +291,8 @@ Routed.post("/friends", async (req, res) => {
 Routed.delete('/deleteFriend',async(req,res)=>{
   try{
     const {sender,receiver}=req.body;
-    // const findFriendToDelete=await Friends.findOne({sender,receiver});
+
+  
     const deleteFriend=await Friends.findOneAndDelete({sender,receiver});
     if(deleteFriend){
     
