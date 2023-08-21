@@ -44,7 +44,7 @@ mongoose.connect(process.env.MONGO)
   });
 
 // Routes
-app.use('/sign', routes);
+app.use('/', routes);
 
 // Start the server
 server.listen(5500, (error) => {
