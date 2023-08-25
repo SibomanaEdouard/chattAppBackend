@@ -10,6 +10,7 @@ const updateInfo=require("../Controllers/updateInfo");
 const sendMessages=require("../Controllers/directMessagecontrollers");
 const ReceivedMessages=require("../Controllers/getDirectMessages").ReceiverMessages;
 const SentMessages=require("../Controllers/getDirectMessages").SentMessages;
+const sentEmail=require("../Controllers/contactController")
 
 // //this is to insert the user in database
 Routed.post('/', async (req, res) => {
@@ -359,4 +360,7 @@ Routed.post("/sendirectmessage",sendMessages);
 //this is the route to get received messages
 Routed.post("/receivedmessages",ReceivedMessages);
 Routed.post("/sentmessages",SentMessages);
+
+//this is the route to send the email
+Routed.post("/contact",sentEmail)
 module.exports = Routed;
